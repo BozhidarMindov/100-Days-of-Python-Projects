@@ -1,2 +1,2 @@
 # 100-Days-of-Python-Projects
-Projects from the Udemy Course 100 Days of Code (Python)
+In this repository I will upload my projects from the Udemy Course 100 Days of Code. The projects will be written primarily in Python.
