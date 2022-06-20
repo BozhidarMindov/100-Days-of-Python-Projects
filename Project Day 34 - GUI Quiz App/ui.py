@@ -68,7 +68,7 @@ class QuizInterface():
     
     #a method that gives the user feedback if they got the answer right or wrong
     #this is done by flashing a red color on the canvas (wrong answer)
-                              #a green color on teh canvas (right answer) 
+                              #a green color on the canvas (right answer) 
     def give_feedback(self, right_or_wrong):
         self.disable_buttons()
         if right_or_wrong == True:
