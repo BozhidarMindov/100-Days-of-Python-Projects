@@ -14,7 +14,7 @@ movies = soup.find_all(name="h3", class_="title")
 #storing the data in a list
 movies_texts = []
 for movie in movies:
-    movies_texts.append(movies.getText())
+    movies_texts.append(movie.getText())
 
 #reversing the list
 movies_texts.reverse()
