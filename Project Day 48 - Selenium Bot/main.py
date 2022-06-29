@@ -24,7 +24,7 @@ while time_end == False:
     #checking the time
     if time.time() > time_to_check:
         can_buy = []
-        #finding the upgrade elemets
+        #finding the upgrade elements
         upgrades = driver.find_elements(By.CSS_SELECTOR, "#store div")
         #buying the most expensive element we can afford
         for upgrade in reversed(upgrades):
