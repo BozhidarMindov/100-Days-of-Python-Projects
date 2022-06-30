@@ -19,7 +19,7 @@ class InternetSpeedTwitterBot:
         self.up = 0
         self.down = 0
 
-    #gettign the internet speed
+    #getting the internet speed
     def get_internet_speed(self):
         self.driver.maximize_window()
         self.driver.get("https://www.speedtest.net/")
@@ -36,7 +36,7 @@ class InternetSpeedTwitterBot:
         self.down = self.driver.find_element(By.XPATH, '//*[@id="container"]/div/div[3]/div/div/div/div[2]/div[3]/div[3]/div/div[3]/div/div/div[2]/div[1]/div[2]/div/div[2]/span').text
 
 
-    #creating a tweet if my internet speed is lower that the pormised one
+    #creating a tweet if my internet speed is lower that the promised one
     def tweet_at_provider(self):
         if float(self.up) < PROMISED_UP or float(self.down) < PROMISED_DOWN:
             self.driver.get("https://twitter.com/login")
