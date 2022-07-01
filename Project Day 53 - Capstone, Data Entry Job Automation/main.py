@@ -17,7 +17,7 @@ zillow_url = "https://www.zillow.com/homes/for_rent/1-_beds/?searchQueryState=%7
 
 response = requests.get(url=zillow_url, headers=headers)
 
-#accessing teh Zillow website and extarcting data for adresses, links and prices
+#accessing the Zillow website and extarcting data for adresses, links and prices
 soup = BeautifulSoup(response.text, "html.parser")
 link_elements = soup.select(".list-card-top a")
 
@@ -46,7 +46,7 @@ for price in price_elements:
 service = Service("G:/chromedriver_win32/chromedriver")
 driver = webdriver.Chrome(service=service)
 
-#wiritng our accessed data to a google form, which is then saved onto a google doc
+#wiritng our accessed data to a google form, which is then saved onto a google sheet
 for i in range(len(links)):
     driver.get(forms_url)
     time.sleep(3)
