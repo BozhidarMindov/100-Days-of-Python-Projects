@@ -47,11 +47,11 @@ class InstaFollower:
         followers.click()
         time.sleep(10)
 
-        modal = self.driver.find_element(By.XPATH, "/html/body/div[6]/div/div/div/div[2]")
+        bar = self.driver.find_element(By.XPATH, "/html/body/div[6]/div/div/div/div[2]")
 
         for i in range(10):
             try:
-                self.driver.execute_script('arguments[0].scrollTop = arguments[0].scrollHeight', modal)
+                self.driver.execute_script('arguments[0].scrollTop = arguments[0].scrollHeight', bar)
                 time.sleep(5)
                 print("scrolled")
             except NoSuchElementException:
